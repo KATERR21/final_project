@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'strings.dart';
-import 'package:final_project/screens/reg.dart';
 import 'package:final_project/screens/task.dart';
 import 'package:final_project/screens/user.dart';
+import 'package:final_project/screens/reg.dart';
 
 void main() {
   runApp(const MyApp());

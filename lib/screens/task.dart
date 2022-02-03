@@ -55,7 +55,6 @@ class _TaskScreenState extends State<TaskScreen> {
     _futureUser = fetchSingleUser(widget.userID);
     _futureTaskList = fetchTaskList(widget.userID);
   }
-
   @override
   Widget build(BuildContext context) {
     if (_checkAuthorization()) {
