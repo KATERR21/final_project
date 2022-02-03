@@ -16,7 +16,6 @@ class TaskMainScreen extends StatelessWidget {
   }
 }
 
-
 class TaskScreen extends StatefulWidget {
   final int userID;
   const TaskScreen({Key? key, required this.userID}) : super(key: key);
@@ -31,7 +30,6 @@ class _TaskScreenState extends State<TaskScreen> {
   late Future<User> _futureUser;
   late Future<TaskList> _futureTaskList;
 
-  //USER AUTHENTICATION
   String? _userStoredName;
   String? _userStoredPass;
 
@@ -55,7 +53,6 @@ class _TaskScreenState extends State<TaskScreen> {
     prefs.setString('userStoredName', (_userStoredName ?? ''));
     prefs.setString('userStoredPass', (_userStoredPass ?? ''));
   }
-  //END OF USER AUTHENTICATION
 
   @override
   void initState() {
@@ -64,7 +61,7 @@ class _TaskScreenState extends State<TaskScreen> {
     _futureUser = fetchSingleUser(widget.userID);
     _futureTaskList = fetchTaskList(widget.userID);
   }
-//задачи пользователя
+
   @override
   Widget build(BuildContext context) {
     if (_checkAuthorization()) {
