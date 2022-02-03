@@ -48,12 +48,6 @@ class _TaskScreenState extends State<TaskScreen> {
     });
   }
 
-  void _saveUserData() async {
-    final prefs = await SharedPreferences.getInstance();
-    prefs.setString('userStoredName', (_userStoredName ?? ''));
-    prefs.setString('userStoredPass', (_userStoredPass ?? ''));
-  }
-
   @override
   void initState() {
     super.initState();
